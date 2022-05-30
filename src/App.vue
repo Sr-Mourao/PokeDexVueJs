@@ -7,17 +7,17 @@
 
   <v-main> 
     <CardPoke />
+    <Input />
   </v-main>
   </v-app>
 </template>
 
 <script>
 import CardPoke from "./components/CardPoke"
-
 export default {
   name: "App",
   components: {
-    CardPoke
+    CardPoke,
   }
 };
 </script>
