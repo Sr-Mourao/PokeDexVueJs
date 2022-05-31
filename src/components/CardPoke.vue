@@ -9,7 +9,7 @@
         label="Digite o personagem"
         single-line 
       ></v-text-field>
-      <v-btn>Pesquisar</v-btn>
+      <v-btn @click="getPokemon">Pesquisar</v-btn>
     </v-toolbar>
     <v-img class="white--text align-end" height="450px" :src="url"> </v-img>
 
@@ -42,12 +42,14 @@ export default {
     };
   },
 
-  beforeMount() {},
+  async beforeMount() {
+    await this.getPokemon();
+  },
 
   methods: {
     getPokemon() {
        api
-      .get('/pokemon/2/')
+      .get(`/pokemon/${this.search}/`)
       .then((response) => {
         console.log(response);
         this.name = response.data.name;
