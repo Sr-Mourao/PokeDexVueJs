@@ -13,14 +13,14 @@
     </v-toolbar>
     <v-img class="white--text align-end" height="450px" :src="url"> </v-img>
 
-    <v-card-title class="pb-0"> {{ name }} </v-card-title>
+    <v-card-title class="pb-0"> Nome: {{ name }} </v-card-title>
 
     <v-card-text class="text--primary">
-      <div>Habilidades</div>
+      <div>Habilidades:</div>
 
-      <div>peso</div>
+      <div>Peso: {{peso}}</div>
 
-      <div>altura</div>
+      <div>Altura: {{altura}}</div>
     </v-card-text>
   </v-card>
 </template>
@@ -37,7 +37,10 @@ export default {
     return {
       name: "",
       url: "",
-      search: ""
+      habilidades: "",
+      peso: "",
+      altura: "",
+      search: "charizard"
 
     };
   },
@@ -53,6 +56,9 @@ export default {
       .then((response) => {
         console.log(response);
         this.name = response.data.name;
+        this.habilidades = response.data.abilities;
+        this.peso = response.data.weight;
+        this.altura = response.data.height;
         this.url = response.data.sprites.other.dream_world.front_default;
       })
       .catch((error) => {
