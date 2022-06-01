@@ -54,7 +54,6 @@ export default {
        api
       .get(`/pokemon/${this.search}/`)
       .then((response) => {
-        console.log(response);
         this.name = response.data.name;
         this.habilidades = response.data.abilities;
         this.peso = response.data.weight;
@@ -62,7 +61,7 @@ export default {
         this.url = response.data.sprites.other.dream_world.front_default;
       })
       .catch((error) => {
-        console.log(error);
+        return error;
       })
       .then(() => {});
     },

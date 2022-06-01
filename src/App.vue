@@ -7,7 +7,6 @@
 
   <v-main> 
     <CardPoke />
-    <Input />
   </v-main>
   </v-app>
 </template>
