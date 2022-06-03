@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <v-toolbar-title>PokeDex</v-toolbar-title>
+      <v-toolbar-title id="titulo">PokeDex</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
 
@@ -23,4 +23,10 @@ export default {
 }
 };
 </script>
+
+<style>
+#titulo {
+  padding: center;
+}
+</style>
 
