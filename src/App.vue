@@ -8,6 +8,7 @@
   <v-main> 
     <CardPoke />
     <FooterVue />
+    
   </v-main>
   </v-app>
 </template>
