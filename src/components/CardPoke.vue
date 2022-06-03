@@ -53,7 +53,7 @@ export default {
     getPokemon() {
        api
       .get(`/pokemon/${this.search}/`)
-      .then((response) => {
+      .then((response) =>{
         this.name = response.data.name;
         this.habilidades = response.data.abilities;
         this.peso = response.data.weight;

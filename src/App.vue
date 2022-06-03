@@ -7,17 +7,20 @@
 
   <v-main> 
     <CardPoke />
+    <FooterVue />
   </v-main>
   </v-app>
 </template>
 
 <script>
 import CardPoke from "./components/CardPoke"
+import FooterVue from "./components/FooterVue.vue"
 export default {
   name: "App",
   components: {
     CardPoke,
-  }
+    FooterVue
+}
 };
 </script>
 
