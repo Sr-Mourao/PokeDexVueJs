@@ -16,7 +16,11 @@
     <v-card-title class="pb-0"> Nome: {{ name }} </v-card-title>
 
     <v-card-text class="text--primary">
-      <div>Habilidades:</div>
+      <h3>ID: {{ id }} </h3>
+      
+      <tr v-for="habilidade in habilidades" :key="habilidade.id">
+        <td>Habilidades: {{habilidade.ability.name}}</td>
+      </tr>
 
       <div>Peso: {{peso}}</div>
 
@@ -37,7 +41,8 @@ export default {
     return {
       name: "",
       url: "",
-      habilidades: "",
+      id: "",
+      habilidades: [],
       peso: "",
       altura: "",
       search: "charizard"
@@ -55,10 +60,12 @@ export default {
       .get(`/pokemon/${this.search}/`)
       .then((response) =>{
         this.name = response.data.name;
+        this.id = response.data.id;
         this.habilidades = response.data.abilities;
         this.peso = response.data.weight;
         this.altura = response.data.height;
         this.url = response.data.sprites.other.dream_world.front_default;
+        console.log(response)
       })
       .catch((error) => {
         return error;

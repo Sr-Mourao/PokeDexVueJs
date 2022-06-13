@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless>
+  <v-footer class="footer"  padless>
     <v-card class="flex" tile>
       <v-card-text class="py-2 white--text primary text-center">
         {{ new Date().getFullYear() }} — <strong>Felipe Mourão</strong>
@@ -15,3 +15,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+  .footer{
+    padding-top: 30px;
+  }
+</style>
