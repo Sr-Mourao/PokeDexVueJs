@@ -6,6 +6,7 @@
     </v-app-bar>
 
   <v-main> 
+    <CardTop />
     <CardPoke />
     <FooterVue />
     
@@ -14,11 +15,14 @@
 </template>
 
 <script>
+import CardTop from "./components/CardTop.vue"
 import CardPoke from "./components/CardPoke"
 import FooterVue from "./components/FooterVue.vue"
+
 export default {
   name: "App",
   components: {
+    CardTop,
     CardPoke,
     FooterVue
 }
