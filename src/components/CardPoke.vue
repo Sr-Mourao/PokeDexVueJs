@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="10" class="mx-auto card" max-width="600">
+  <v-card elevation="5" class="mx-auto card" max-width="450">
     <v-toolbar flat color="transparent">
       <v-text-field
         v-model="search"
@@ -8,7 +8,7 @@
       ></v-text-field>
       <v-btn @click="getPokemon">Pesquisar</v-btn>
     </v-toolbar>
-    <v-img class="white--text align-end" height="450px" :src="url"> </v-img>
+    <v-img class="white--text align-end" width="500px" :src="url"> </v-img>
 
     <v-card-title class="pb-0"> Nome: {{ name }} </v-card-title>
 
@@ -90,6 +90,6 @@ export default {
 
 <style scoped>
 .card {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 </style>
